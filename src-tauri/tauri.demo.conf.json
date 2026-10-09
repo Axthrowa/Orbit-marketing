@@ -1,0 +1,23 @@
+{
+  "productName": "Etkilesim Takip Demo",
+  "identifier": "com.axthrowa.etkilesimtakip.demo",
+  "build": {
+    "beforeBuildCommand": "node node_modules/vite/bin/vite.js build --mode demo",
+    "frontendDist": "../dist-demo"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Etkileşim Takip — Demo",
+        "width": 1360,
+        "height": 860,
+        "minWidth": 1024,
+        "minHeight": 640
+      }
+    ]
+  },
+  "bundle": {
+    "active": false
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "identifier": "default",
+  "description": "Ana pencere: yalnızca çekirdek izinler. Motor komutları src/commands.rs beyaz listesindedir.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

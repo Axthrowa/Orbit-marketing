@@ -1,0 +1,45 @@
+{
+  "name": "etkilesim-takip",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Etkileşim Takip: gerilla pazarlama takip, istatistik, duygu analizi ve topluluk keşif platformu. created by axthrowa",
+  "author": "axthrowa",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "node scripts/check-forbidden.mjs",
+    "test": "vitest run",
+    "tauri": "tauri",
+    "app:dev": "tauri dev",
+    "app:build": "tauri build",
+    "engine:test": "engine\\.venv\\Scripts\\python.exe -m pytest engine",
+    "e2e": "node node_modules/vite/bin/vite.js build --mode demo && engine\\.venv\\Scripts\\python.exe -m pytest e2e",
+    "audit:deps": "npm audit && engine\\.venv\\Scripts\\python.exe -m pip_audit --local",
+    "engine:package": "powershell -ExecutionPolicy Bypass -File scripts/build-engine.ps1",
+    "app:release": "npm run engine:package && tauri build --config src-tauri/tauri.bundle.conf.json"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "simple-icons": "^16.34.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@tauri-apps/cli": "^2.0.0",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^25.0.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.0",
+    "vitest": "^5.0.3"
+  }
+}
